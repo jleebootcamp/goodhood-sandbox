@@ -27,8 +27,6 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/index.html'));
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 });
 
 
