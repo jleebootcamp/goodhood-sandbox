@@ -8,6 +8,7 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+const cors = require('cors');
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -16,6 +17,7 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 
 // Serve up static assets
 
